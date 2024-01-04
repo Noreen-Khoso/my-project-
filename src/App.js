@@ -1,10 +1,13 @@
 import About from "./Components/About";
-import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
-
-import Navigation from "./Components/Navigation";
-import Reviews from "./Components/Reviews";
+import Home from "./Pages/Home";
+import Navigation from "./Components/Navigation"
+import { BrowserRouter } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Services from "./Components/Services";
+import Reviews from "./Components/Reviews";
+import Footer from "./Components/Footer";
+import Login from "./Components/Login";
 
 
 
@@ -12,20 +15,20 @@ import Services from "./Components/Services";
 function App() {
   return (
     <>
-    
 
-    <div >
-      <Navigation/>
-      <Hero/>
-      <About/>
-      <Services/>
-      <Reviews/>
-      <Footer/>
-    
 
-    </div>
+      <BrowserRouter>
+        <Navigation/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Service"  element = {< Services/>}/>
+          <Route path="/Review"  element = {<Reviews/>}/>
+          <Route path="/login" element ={<Login/>} />
+        </Routes>
+      </BrowserRouter>
 
-      
+
     </>
   );
 }

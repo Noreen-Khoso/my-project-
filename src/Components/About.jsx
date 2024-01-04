@@ -1,11 +1,11 @@
 import React from 'react';
 import shop from "../Assets/shop.jpeg"
-import { CgLastpass } from 'react-icons/cg'
+
 
 const About = () => {
     return (
         <>
-            <div className=' '>
+            <div className='  '>
             <div className='py-20'>
             <div className=' container '>
                 <div className='grid grid-cols-1 sm:grid-cols-2 items-center px-10'>

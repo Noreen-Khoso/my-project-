@@ -6,7 +6,7 @@
 
 
 button{
-    @apply rounded-3xl border-gray-900 py-2 px-4 hover:text-white duration-300 
+    @apply bg-teal-950 text-slate-300 rounded-3xl border-teal-950 py-2 px-6 hover:bg-transparent hover:text-teal-950 duration-300 
 }
 body{
     @apply box-border overflow-x-hidden w-screen font-poppin m-0

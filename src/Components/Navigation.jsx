@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
 import { FcMenu } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const Menu = [
   {
     id: 1,
     name: 'Home',
-    link: '/#',
+    link: '/',
   },
   {
     id: 2,
     name: 'About',
-    link: '/#About',
+    link: '/About',
   },
   {
     id: 3,
     name: 'Services',
-    link: '/#Service',
+    link: '/Service',
   },
   {
     id: 4,
     name: 'Review',
-    link: '/#Review',
+    link: '/Review',
   },
 ];
 
@@ -33,9 +34,9 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="fixed z-50 w-full flex justify-between items-center py-5 px-5">
-        <h1 className="text-white font-bold text-xl md:text-3xl uppercase ml-2 z-20 ">
-          Dreamy <span className=" ">Flower</span>
+      <div className="fixed z-20 w-full flex justify-between items-center  px-10 bg-black">
+        <h1 className=" text-lime-600 font-bold text-xl md:text-3xl uppercase ml-2 z-20 ">
+          Dreamy <span className=" text-pink-500 ">Flower</span>
         </h1>
 
         <div className="sm:hidden">
@@ -44,20 +45,20 @@ const Navigation = () => {
           </button>
         </div>
 
-        <ul className="hidden sm:flex sm:items-center sm:gap-4 sm:text-lg sm:text-white sm:font-semibold">
+        <ul className="hidden sm:flex sm:items-center sm:gap-4 sm:text-lg sm:text-slate-200 sm:font-semibold">
           {Menu.map((menu) => (
             <li key={menu.id}>
-              <a
-                href={menu.link}
-                className="inline-block py-4 px-4 hover:text-green-400 duration-200"
+              <Link
+                to={menu.link}
+                className="inline-block py-4 px-4 hover:text-pink-600 hover:border-b-2 border-pink-600 duration-200"
               >
                 {menu.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <button className="hidden md:flex flex-nowrap text-lg md:text-xl text-black bg-transparent border-[1px] " >
-            Contact
+        <button className="hidden md:flex flex-nowrap text-lg md:text-xl  border-[1px] hover:bg-slate-200 " >
+            login
           </button>
 
         {/* Mobile Menu */}
@@ -70,16 +71,22 @@ const Navigation = () => {
           <ul className="text-white font-semibold text-center pt-16">
             {Menu.map((menu) => (
               <li key={menu.id}>
-                <a
-                  href={menu.link}
+                <Link
+                  to={menu.link}
                   className="block py-2 px-4 hover:bg-gray-700 transition duration-200"
                   onClick={toggleMenu}
                 >
                   {menu.name}
-                </a>
+                </Link>
               </li>
             ))}
+             <button className="  text-lg md:text-xl  border-[1px] " >
+            login
+          </button>
+
           </ul>
+          
+
         </div>        
       </div>
     </>

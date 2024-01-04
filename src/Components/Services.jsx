@@ -26,9 +26,9 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className='mb-12 mt-14'>
-        <div className='container'>
-            <div className=' text-center mb-20 max-w-[400px] mx-auto'>
+    <div className='  '>
+        <div className='container '>
+            <div className=' text-center mb-20  max-w-[400px] mx-auto '>
                 <h1 className='text-3xl font-bold'>Our Services</h1>
                 <p className=' text-xs text-gray-800 leading-5'>
                 Here are some potential services 
@@ -36,7 +36,7 @@ const Services = () => {
             </div>
             <div className=' grid grid-cols-1 sm:grid-cols-3 cursor-pointer px-10 gap-5 md:gap-10 place-content-center drop-shadow-[-10px_10px_12px_rgba(0,0,0,0.5)]'>
             {servicesData.map(({ id, img, title, description }) => (
-                <div key={id} className=" space-y-10 rounded-3xl bg-slate-200 hover:bg-transparent hover:border-1 border-slate-500 shadow-xl duration-200 group max-w-[300px] relative ">
+                <div key={id} className="  rounded-3xl border-2 border-lime-900 bg-lime-200 hover:bg-pink-200 hover:border-2 hover:border-pink-800 shadow-lg  group max-w-[300px] relative ">
                   <img
                     src={img}
                     alt=""
@@ -46,7 +46,7 @@ const Services = () => {
                     <h3 className="font-semibold">{title}</h3>
                     <p className="pb-10 text-sm text-gray-700">{description}</p>
                     <div className="flex items-center  justify-center gap-1 mb-10 ">
-                        <button className=' bg-slate-700 px-5 py-2'>more info</button>
+                        {/* <button className='  px-5 py-2'>more info</button> */}
                      
                      
                     </div>
