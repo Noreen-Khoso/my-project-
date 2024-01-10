@@ -6,6 +6,7 @@ import Footer from '../Components/Footer';
 import About from "../Components/About"
 import Services from "../Components/Services"
 import Reviews from '../Components/Reviews';
+import Navigation from '../Components/Navigation';
 
 
 
@@ -14,9 +15,9 @@ import Reviews from '../Components/Reviews';
 const Home = () => {
   return (
     <>
-    <div className=''>
+    <div className='/'>
       
-     
+       <Navigation/>
       <Hero/>
       <About/>
       <Services/>

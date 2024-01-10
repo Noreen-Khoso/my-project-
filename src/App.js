@@ -4,10 +4,12 @@ import Navigation from "./Components/Navigation"
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import Services from "./Components/Services";
-import Reviews from "./Components/Reviews";
-import Footer from "./Components/Footer";
-import Login from "./Components/Login";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import Product from "./Pages/Product";
+import EventServiceProducts from "./Components/EventServiceProducts";
+import GardenServicesProducts from "./Components/GardenServicesProducts";
+import CustomServicesProducts from "./Components/CustomServicesProducts";
 
 
 
@@ -18,13 +20,18 @@ function App() {
 
 
       <BrowserRouter>
-        <Navigation/>
+       
         <Routes>
-          <Route path="/" element={<Home />} />
+          
+          <Route path="/" element={<Home/>} />
           <Route path="/About" element={<About />} />
-          <Route path="/Service"  element = {< Services/>}/>
-          <Route path="/Review"  element = {<Reviews/>}/>
+          <Route path="/Products" element={<Product/>} />
+          <Route path="/event" element={<EventServiceProducts/>} />
+          <Route path="/garden" element={<GardenServicesProducts/>} />
+          <Route path="/custom" element={<CustomServicesProducts/>} />
           <Route path="/login" element ={<Login/>} />
+          <Route path="/register" element ={<Register/>} />
+          
         </Routes>
       </BrowserRouter>
 

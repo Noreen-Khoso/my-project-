@@ -5,7 +5,7 @@ import shop from "../Assets/shop.jpeg"
 const About = () => {
     return (
         <>
-            <div className='  '>
+            <div Name="/About" className='  '>
             <div className='py-20'>
             <div className=' container '>
                 <div className='grid grid-cols-1 sm:grid-cols-2 items-center px-10'>

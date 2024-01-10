@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FcMenu } from 'react-icons/fc';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const Menu = [
   {
@@ -31,10 +32,11 @@ const Navigation = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+  const navigate = useNavigate();
 
   return (
     <>
-      <div className="fixed z-20 w-full flex justify-between items-center  px-10 bg-black">
+      <div className="fixed z-20 w-full flex justify-between items-center py-2  px-10 bg-black">
         <h1 className=" text-lime-600 font-bold text-xl md:text-3xl uppercase ml-2 z-20 ">
           Dreamy <span className=" text-pink-500 ">Flower</span>
         </h1>
@@ -50,21 +52,22 @@ const Navigation = () => {
             <li key={menu.id}>
               <Link
                 to={menu.link}
-                className="inline-block py-4 px-4 hover:text-pink-600 hover:border-b-2 border-pink-600 duration-200"
+                className="inline-block py-4 px-4 hover:text-pink-600 hover:border-b-2 border-pink-600 duration-200 cursor-pointer"
+                smooth={true} duration={200}
               >
                 {menu.name}
               </Link>
             </li>
           ))}
         </ul>
-        <button className="hidden md:flex flex-nowrap text-lg md:text-xl  border-[1px] hover:bg-slate-200 " >
+        <button onClick={()=>{navigate("/login")}} className="hidden primary_button md:flex flex-nowrap text-lg md:text-xl  border-[1px] hover:bg-slate-200 " >
             login
           </button>
 
         {/* Mobile Menu */}
         <div className={`fixed top-0 right-0 h-full bg-black w-2/3 flex flex-col p-5 ${showMenu ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-700 z-50`}>
           <div className='flex justify-end'>
-          <button onClick={toggleMenu} className="text-white bg-transparent hover:text-white px-4 py-1">
+          <button onClick={toggleMenu}  className="text-white bg-transparent hover:text-white px-4 py-1">
             <FcMenu size={24}/>
           </button>
           </div>
@@ -73,20 +76,21 @@ const Navigation = () => {
               <li key={menu.id}>
                 <Link
                   to={menu.link}
-                  className="block py-2 px-4 hover:bg-gray-700 transition duration-200"
                   onClick={toggleMenu}
+                  className="block py-2 px-4 hover:bg-gray-700 transition duration-200 cursor-pointer" 
+                  smooth={true} duration={200}
                 >
                   {menu.name}
                 </Link>
               </li>
             ))}
-             <button className="  text-lg md:text-xl  border-[1px] " >
+             <button  
+             onClick={()=>{navigate("/login")}} className=" primary_button text-lg md:text-xl  border-[1px] primary_button "> 
             login
           </button>
 
           </ul>
-          
-
+    
         </div>        
       </div>
     </>

@@ -21,7 +21,7 @@ const Hero = () => {
             Brighten someone's day with stunning flower arrangements.
           </p>
           <div>
-            <button className="text-lg md:text-2xl border-[1px] rounded-r-3xl border-gray-900 py-2 px-6 md:px-8 lg:px-10">
+            <button className="text-lg md:text-2xl border-[1px] rounded-r-3xl border-gray-900 py-2 px-6 md:px-8 lg:px-10 primary_button">
               Order Now
             </button>
           </div>

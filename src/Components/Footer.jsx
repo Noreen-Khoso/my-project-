@@ -6,7 +6,7 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const Footer = () => {
   return (
-    <div className=' '>
+    <div className='w-screen pt-20'>
         <div className=' container py-2'>
             <div className=' flex flex-col items-center gap-10 '>
                 <div className='flex flex-col md:flex-row items-center gap-2 md:gap-5  ' >
@@ -45,7 +45,7 @@ const Footer = () => {
                 </div>
             </div>
                 </div>
-                <div className=' conatiner flex justify-center items-center py-5 bg-black w-screen'>
+                <div className=' conatiner flex justify-center items-center py-2 bg-black w-screen'>
                     <p className=' text-sm md:text-lg text-gray-400 text-center font-semibold'>
                         Dreamy Flower @2023 All Rights Reserved
                     </p>

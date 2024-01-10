@@ -1,9 +1,9 @@
 import React from 'react'
 
-const BUtton = () => {
+const BUtton = ({text}) => {
   return (
     <div className=' '>
-        <button class=" button">Contacts</button>
+        <button className="small_button">{text}</button>
     </div>
   )
 }

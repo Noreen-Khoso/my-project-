@@ -5,7 +5,7 @@ const Reviews = () => {
     return (
         <>
 
-            <div className='  py-10 px-10 md:px-5'>
+            <div name="/Review" className=' h-full w-screen py-20'>
                 <div className=' container '>
                     <div className="text-center mb-10 max-w-[600px] mx-auto">
 
